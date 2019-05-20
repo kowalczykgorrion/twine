@@ -1,6 +1,6 @@
 module Twine
   class TwineDefinition
-    attr_reader :key
+    attr_accessor :key
     attr_accessor :comment
     attr_accessor :tags
     attr_reader :translations

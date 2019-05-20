@@ -42,6 +42,9 @@ module Twine
             new_definition = definition.dup
             new_definition.translations[language] = value
 
+            key_with_section = section.name.upcase.gsub(' ', '_') + '_' + new_definition.key
+            new_definition.key = key_with_section
+
             new_section.definitions << new_definition
             result.definitions_by_key[new_definition.key] = new_definition
           end
